@@ -36,6 +36,6 @@ jobs:
 
         docker images
         echo -e "USER_DOCKER: $github.sha"
+        docker tag docker-from-zero-to-mastery-java:latest 8841523/docker-from-zero-to-mastery-java:${{ github.sha }}
 
         docker push 8841523/docker-from-zero-to-mastery-java:${{ github.sha }}
-        docker push 8841523/docker-from-zero-to-mastery-java:latest
