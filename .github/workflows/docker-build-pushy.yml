@@ -38,3 +38,4 @@ jobs:
         docker tag docker-from-zero-to-mastery-java:latest "$DOCKER_USERNAME"/docker-from-zero-to-mastery-java:${{ github.sha }}
 
         docker push "$DOCKER_USERNAME"/docker-from-zero-to-mastery-java:${{ github.sha }}
+        docker push "$DOCKER_USERNAME"/docker-from-zero-to-mastery-java:latest
