@@ -34,5 +34,7 @@ jobs:
         docker buildx create --use
         echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
 
-        docker push ${{ secrets.DOCKER_USERNAME }}/docker-from-zero-to-mastery-java:${{ github.sha }}
-        docker push ${{ secrets.DOCKER_USERNAME }}/docker-from-zero-to-mastery-java:latest
+        echo -e "USER_DOCKER: $DOCKER_USERNAME"
+
+        docker push 8841523/docker-from-zero-to-mastery-java:${{ github.sha }}
+        docker push 8841523/docker-from-zero-to-mastery-java:latest
